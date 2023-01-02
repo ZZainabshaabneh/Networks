@@ -4,23 +4,14 @@ from core.Posts.models import Posts
 
 
 
-class CreatPost(ListCreateAPIView):
+class PostListCreateAPIView(ListCreateAPIView):
       model=Posts
 
       queryset = Posts.objects.all()
       serializer_class = PostsSerializer
 
-class APIPosts(ListCreateAPIView):
 
-    queryset = Posts.objects.all()
-    serializer_class = PostsSerializer
-
-class DeletePost(RetrieveUpdateDestroyAPIView):
-    queryset = Posts.objects.all()
-    serializer_class = PostsSerializer
-
-
-class UpdatePost(RetrieveUpdateDestroyAPIView):
+class PostRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     queryset = Posts.objects.all()
     serializer_class = PostsSerializer
 

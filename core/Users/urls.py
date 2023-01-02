@@ -1,12 +1,11 @@
 from django.urls import path
-from core.Users.views import userview,creatuser
+from core.Users.views import UserListCreateAPIView
 
 app_name = "users"
 
 
 urlpatterns=[
- path('user/',userview.as_view()),
- path('creatuser/',creatuser.as_view()),
+ path('user/',UserListCreateAPIView.as_view()),
 ]
 
 
