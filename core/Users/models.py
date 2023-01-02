@@ -1,9 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import posts
-from pygments.lexers import get_all_lexers
-from pygments.styles import get_all_styles
 
-# Create your models here.
+
 class User(models.Model):
     username = models.CharField(max_length=100, blank=False,null=False)
     email = models.CharField(max_length=100, blank=True,null=False)
@@ -24,8 +21,7 @@ class Address(models.Model):
     street =models.CharField(max_length=100, blank=True, default='')
     user = models.ForeignKey(User,on_delete=models.CASCADE)
 
-    def __str__(self):
-      return self.name
+
 class Relation(models.Model):
     relation_type =models.CharField(max_length=100,blank=False)
     status =models.CharField(unique=False,max_length=100,blank=False)

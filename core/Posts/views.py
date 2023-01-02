@@ -6,7 +6,6 @@ from core.Posts.models import Posts
 
 class PostListCreateAPIView(ListCreateAPIView):
       model=Posts
-
       queryset = Posts.objects.all()
       serializer_class = PostsSerializer
 

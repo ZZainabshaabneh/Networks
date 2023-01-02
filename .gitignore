@@ -1,0 +1,7 @@
+.env
+env
+settings/local.py
+*.sqlite3
+.idea
+__pycache__/
+apps/

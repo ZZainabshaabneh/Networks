@@ -10,8 +10,3 @@ class PostsSerializer(serializers.models):
         fields = '__all__'
 
 
-class UserSerializer(serializers.models):
-    class Meta:
-        model = Users
-        fields = '__all__'
-
